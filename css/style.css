@@ -1,0 +1,300 @@
+/* 基本样式先统一一下，后面每个页面都能直接用 */
+:root {
+  /* 页面背景色，整个网站的底色都靠它控制 */
+  --bg: #f7f9fc;
+  /* 卡片底色，白色能让内容看起来干净一些 */
+  --surface: #ffffff;
+  /* 主标题和重点文字颜色 */
+  --text-main: #24324a;
+  /* 普通正文颜色，读起来会更柔和一点 */
+  --text-body: #4f5d75;
+  /* 主色，按钮和小标题会反复用到 */
+  --primary: #6c63ff;
+  /* 辅助色，后面有需要可以拿来点缀 */
+  --accent: #ffb86b;
+  /* 边框线颜色，让卡片边缘更清楚 */
+  --line: #dce3f0;
+  /* 阴影统一放这里，卡片看起来会更有层次 */
+  --shadow: 0 18px 48px rgba(41, 52, 98, 0.12);
+  /* 大圆角，整个网站都走柔和一点的感觉 */
+  --radius-lg: 24px;
+}
+
+* {
+  /* 让宽高计算更稳定，做页面时比较省心 */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* 常见中文字体，页面会更像平时作业里会用的样子 */
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  color: var(--text-main);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+a {
+  /* 先把默认下划线去掉，后面统一自己控制 */
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  /* 图片设成块元素，避免底部留白 */
+  display: block;
+  max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  /* 表单元素继承字体，页面看起来会统一很多 */
+  font: inherit;
+}
+
+.w {
+  /* 通栏内容的公共宽度，基本所有主要区域都会套这个类 */
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.section {
+  /* 每个大区块上下留白，页面呼吸感会更好 */
+  padding: 72px 0;
+}
+
+.light-part {
+  /* 浅色背景区块，用来跟普通白底区域做区分 */
+  background: linear-gradient(180deg, rgba(108, 99, 255, 0.06), rgba(108, 99, 255, 0.02));
+}
+
+.box {
+  /* 通用卡片，很多地方都直接复用这个类 */
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.small-title {
+  /* 小标题一般放在大标题上面，用来说明板块名字 */
+  margin: 0 0 12px;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.text-big {
+  /* 稍微大一点的说明文字，首页和内页标题区会常用 */
+  color: var(--text-body);
+  font-size: 18px;
+}
+
+/* 头部导航 */
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(247, 249, 252, 0.94);
+  border-bottom: 1px solid rgba(220, 227, 240, 0.9);
+  backdrop-filter: blur(18px);
+}
+
+.nav {
+  /* 导航栏里面的内容左右排开 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 0;
+}
+
+.logo {
+  /* 网站名字，故意做得更醒目一点 */
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.menu {
+  /* 导航链接横着排，宽度不够时允许换行 */
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  /* 单个导航链接的基础样式 */
+  position: relative;
+  color: var(--text-body);
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.menu a:hover {
+  color: var(--primary);
+}
+
+.menu a::after {
+  /* hover 时出现的小下划线，能让导航更灵一点 */
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.menu a:hover::after {
+  transform: scaleX(1);
+}
+
+.btn-line {
+  /* 按钮排成一行，两个按钮挨着放 */
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.btn {
+  /* 按钮公共样式，主按钮和浅色按钮都从这里继承 */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-main {
+  /* 主按钮，颜色最明显，用来放重点跳转 */
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(108, 99, 255, 0.24);
+}
+
+.btn-light {
+  /* 次按钮，颜色轻一点，给第二选择用 */
+  background: #fff;
+  color: var(--text-main);
+  border-color: var(--line);
+}
+
+.title-box {
+  /* 每个大板块标题外层，主要控制和下面内容的距离 */
+  margin-bottom: 32px;
+}
+
+.title-box h1,
+.title-box h2,
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+.card-list {
+  /* 卡片列表的公共网格容器 */
+  display: grid;
+  gap: 24px;
+}
+
+.three {
+  /* 三列排版，节目页和资源页都会用到 */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.two-col {
+  /* 两列排版，首页试听区和详情页都靠这个做 */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.list {
+  /* 通用列表，主要给节目要点和介绍清单用 */
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text-body);
+}
+
+.more-link {
+  /* 卡片里常见的文字链接，看起来比普通正文更明显 */
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.pic {
+  /* 图片或封面占位块的统一外边距和圆角 */
+  margin-bottom: 18px;
+  border-radius: 18px;
+}
+
+.demo-pic {
+  /* 先用虚线框顶住图片位置，后面换真图最方便 */
+  display: grid;
+  place-items: center;
+  min-height: 180px;
+  border: 2px dashed #c9d3e8;
+  background: linear-gradient(135deg, #f8f9ff, #eef3ff);
+  color: #7c8aa5;
+}
+
+/* 页脚写简单一些，后面也方便你自己改 */
+.foot {
+  /* 页脚整体留白，别让底部太挤 */
+  padding: 28px 0 40px;
+}
+
+.foot-in {
+  /* 页脚里的文字居中显示 */
+  text-align: center;
+  color: var(--text-body);
+}
+
+@media (max-width: 900px) {
+  /* 屏幕窄下来以后，多列都改成单列，手机上更好看 */
+  .three,
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    /* 手机端导航改成上下排，避免太挤 */
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  /* 手机尺寸再小一点时，把留白和字号也顺手收一收 */
+  .section {
+    padding: 56px 0;
+  }
+
+  .menu {
+    gap: 14px 18px;
+  }
+
+  .text-big {
+    font-size: 16px;
+  }
+}

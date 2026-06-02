@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>听见成长 | 联系我</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contact.css">
+  </head>
+  <body>
+    <!-- 表单页主要是把常见表单元素都放进去 -->
+    <header class="top">
+      <div class="w nav">
+        <a class="logo" href="./index.html">听见成长</a>
+        <nav class="menu">
+          <a href="./index.html">首页</a>
+          <a href="./about.html">关于我</a>
+          <a href="./episodes.html">节目</a>
+          <a href="./resources.html">资源</a>
+          <a href="./contact.html">联系我</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="w form-wrap">
+        <!-- 这个页面主要是完成表单要求 -->
+        <article class="box form-box">
+          <p class="small-title">联系我</p>
+          <h1>欢迎留言</h1>
+          <p class="form-text">如果你也对学习方法、阅读分享或成长话题感兴趣，欢迎在下面留言。</p>
+          <!-- 表单内容按从上到下的顺序排，结构会比较清楚 -->
+          <form>
+            <!-- 姓名输入框 -->
+            <label for="name">姓名</label>
+            <input id="name" type="text" placeholder="请输入你的姓名">
+
+            <!-- 邮箱输入框 -->
+            <label for="email">邮箱</label>
+            <input id="email" type="email" placeholder="请输入你的邮箱">
+
+            <!-- 下拉框用来展示表单元素 -->
+            <label for="topic">喜欢的主题</label>
+            <select id="topic">
+              <option>学习方法</option>
+              <option>阅读分享</option>
+              <option>时间管理</option>
+              <option>校园生活</option>
+            </select>
+
+            <!-- 文本域用来写留言 -->
+            <label for="message">留言内容</label>
+            <textarea id="message" rows="6" placeholder="欢迎写下你的建议"></textarea>
+
+            <!-- 按钮沿用全站主按钮样式，这样不用重复写很多代码 -->
+            <button class="btn btn-main" type="submit">提交留言</button>
+          </form>
+        </article>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <div class="w foot-in">
+        <p>听见成长 | 联系我</p>
+      </div>
+    </footer>
+  </body>
+</html>

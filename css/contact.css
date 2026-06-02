@@ -1,0 +1,44 @@
+/* 联系我页面 */
+.form-wrap {
+  /* 表单区域宽度收窄一点，看起来更集中 */
+  width: min(760px, calc(100% - 32px));
+}
+
+.form-box {
+  /* 表单卡片内边距，留白大一点会更舒服 */
+  padding: 32px;
+}
+
+.form-text {
+  /* 表单上面的说明文字 */
+  margin-bottom: 22px;
+  color: var(--text-body);
+}
+
+form {
+  /* 表单里的元素一行一个排下去 */
+  display: grid;
+  gap: 14px;
+}
+
+label {
+  /* 每个输入项标题加粗一点，更清楚 */
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  /* 输入框、下拉框、文本域统一外观 */
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d7deeb;
+  border-radius: 14px;
+  background: #fff;
+  color: var(--text-main);
+}
+
+textarea {
+  /* 文本域允许上下拉伸，写长留言会方便一点 */
+  resize: vertical;
+}

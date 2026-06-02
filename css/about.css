@@ -1,0 +1,23 @@
+/* 关于我页面 */
+.about-main {
+  /* 两列内容顶部对齐，避免左右高低不一致太明显 */
+  align-items: start;
+}
+
+.about-left,
+.about-right {
+  /* 左右两块内容统一留白 */
+  padding: 32px;
+}
+
+.photo-box {
+  /* 个人照片占位区，先用虚线框表示位置 */
+  display: grid;
+  place-items: center;
+  min-height: 260px;
+  margin-bottom: 20px;
+  border: 2px dashed #c9d3e8;
+  border-radius: 18px;
+  color: #7c8aa5;
+  background: linear-gradient(135deg, #f7f8ff, #f3f6fb);
+}

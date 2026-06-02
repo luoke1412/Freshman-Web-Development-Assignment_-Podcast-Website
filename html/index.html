@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>听见成长 | 首页</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/index.css">
+  </head>
+  <body>
+    <!-- 顶部导航，所有页面保持统一 -->
+    <header class="top">
+      <div class="w nav">
+        <a class="logo" href="./index.html">听见成长</a>
+        <nav class="menu">
+          <a href="./index.html">首页</a>
+          <a href="./about.html">关于我</a>
+          <a href="./episodes.html">节目</a>
+          <a href="./resources.html">资源</a>
+          <a href="./contact.html">联系我</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- 首页第一屏，先把网站主题放出来 -->
+      <section class="section first-screen">
+        <div class="w first-box">
+          <div class="first-text">
+            <p class="small-title">成长型个人播客网站</p>
+            <h1>用声音记录学习、生活与成长灵感</h1>
+            <p class="text-big">
+              《听见成长》主要分享学习方法、阅读体会、时间管理和校园生活感悟，希望让每一次收听都能带来一点新的启发。
+            </p>
+            <!-- 这里放两个按钮，一个跳节目页，一个跳个人介绍页 -->
+            <div class="btn-line">
+              <a class="btn btn-main" href="./episodes.html">查看节目</a>
+              <a class="btn btn-light" href="./about.html">了解站长</a>
+            </div>
+          </div>
+          <!-- 右边这个卡片当成首页信息补充，也能让首屏更饱满一点 -->
+          <div class="box first-card">
+            <p class="small-title">本网站包含</p>
+            <h2>首页重点内容一目了然</h2>
+            <ul class="list">
+              <li>精选节目展示</li>
+              <li>最新音频试听</li>
+              <li>站长个人介绍</li>
+              <li>成长资源推荐</li>
+            </ul>
+            <p class="card-tip">后面你只需要把图片、音频和个人资料换成自己的素材就行。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 这一块放节目卡片，适合讲布局和盒子模型 -->
+      <section class="section">
+        <div class="w title-box">
+          <p class="small-title">精选节目</p>
+          <h2>最近更新的三期内容</h2>
+        </div>
+        <div class="w card-list three">
+          <article class="box item-box">
+            <div class="pic demo-pic">节目封面</div>
+            <h3>第 01 期：把学习计划写得更清楚</h3>
+            <p>分享怎样把大目标拆成小任务，让每天的安排更容易执行。</p>
+            <a class="more-link" href="./episode-detail.html">查看详情</a>
+          </article>
+          <article class="box item-box">
+            <div class="pic demo-pic">节目封面</div>
+            <h3>第 02 期：读书分享怎么真正帮到自己</h3>
+            <p>从做笔记、摘重点到复盘思考，整理更实用的阅读方法。</p>
+            <a class="more-link" href="./episode-detail.html">查看详情</a>
+          </article>
+          <article class="box item-box">
+            <div class="pic demo-pic">节目封面</div>
+            <h3>第 03 期：忙碌的时候也要照顾好情绪</h3>
+            <p>聊一聊压力大的时候怎样调整状态，保持稳定节奏。</p>
+            <a class="more-link" href="./episode-detail.html">查看详情</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- 左边放试听，右边放个人介绍 -->
+      <section class="section light-part">
+        <div class="w two-col">
+          <article class="box simple-box">
+            <p class="small-title">最新试听</p>
+            <h2>先听一小段节目预告</h2>
+            <p>这里先放一个音频位置，等你后面把自己的 MP3 文件放进 audio 文件夹再替换。</p>
+            <div class="audio-demo">这里放音频播放器</div>
+          </article>
+          <article class="box simple-box">
+            <p class="small-title">站长简介</p>
+            <h2>一个喜欢记录成长的人</h2>
+            <p>我想把校园里的学习体会、阅读心得和生活感受整理成更轻松的播客内容，让大家在空闲时间也能收获一点力量。</p>
+            <a class="more-link" href="./about.html">查看更多介绍</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- 最后放一个资源推荐，首页看起来会更完整 -->
+      <section class="section">
+        <div class="w title-box">
+          <p class="small-title">成长资源</p>
+          <h2>一些简单实用的内容推荐</h2>
+        </div>
+        <div class="w card-list three">
+          <article class="box item-box">
+            <h3>书单推荐</h3>
+            <p>挑几本适合学生阶段阅读的书，内容以成长和效率提升为主。</p>
+          </article>
+          <article class="box item-box">
+            <h3>方法清单</h3>
+            <p>整理做计划、记笔记和安排复习时比较好用的小方法。</p>
+          </article>
+          <article class="box item-box">
+            <h3>鼓励的话</h3>
+            <p>遇到低谷的时候，慢一点也没关系，先让自己稳下来再出发。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- 页脚信息简单一点，方便后面统一改 -->
+    <footer class="foot">
+      <div class="w foot-in">
+        <p>听见成长 | 个人播客网站网页设计作业</p>
+      </div>
+    </footer>
+  </body>
+</html>

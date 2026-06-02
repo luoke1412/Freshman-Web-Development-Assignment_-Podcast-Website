@@ -1,0 +1,47 @@
+/* 首页样式 */
+.first-box {
+  /* 首页首屏左右分栏，左边放文字，右边放说明卡片 */
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.first-screen h1 {
+  /* 首页主标题字号做大一点，这样更像重点页面 */
+  margin-bottom: 20px;
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1.12;
+}
+
+.first-card,
+.item-box,
+.simple-box {
+  /* 首页常用卡片统一内边距，看起来更整齐 */
+  padding: 28px;
+}
+
+.card-tip {
+  /* 小提示文字颜色浅一点，放在卡片底部不抢重点 */
+  margin-top: 18px;
+  color: var(--text-body);
+}
+
+.audio-demo {
+  /* 音频占位块，后面可以直接换成真实播放器 */
+  display: grid;
+  place-items: center;
+  min-height: 90px;
+  margin-top: 18px;
+  border: 2px dashed #c9d3e8;
+  border-radius: 18px;
+  color: #7c8aa5;
+  background: linear-gradient(135deg, #f8f9ff, #eef3ff);
+}
+
+@media (max-width: 900px) {
+  .first-box {
+    /* 手机端首屏上下排，更容易阅读 */
+    grid-template-columns: 1fr;
+  }
+}

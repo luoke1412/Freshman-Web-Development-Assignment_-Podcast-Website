@@ -1,0 +1,34 @@
+/* 节目相关页面 */
+.item-box,
+.detail-left,
+.detail-right {
+  /* 节目卡片和详情区统一内边距，这样整体风格会统一 */
+  padding: 28px;
+}
+
+.detail-main {
+  /* 详情页左右两块从顶部开始对齐 */
+  align-items: start;
+}
+
+.big-pic,
+.audio-box {
+  /* 封面占位和音频占位走同一套虚线框风格 */
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  color: #7c8aa5;
+  background: linear-gradient(135deg, #f8f9ff, #eef3ff);
+  border: 2px dashed #c9d3e8;
+}
+
+.big-pic {
+  /* 节目封面区留大一点，视觉上更稳 */
+  min-height: 320px;
+}
+
+.audio-box {
+  /* 音频播放器区域高度适中，后面放控件正好 */
+  min-height: 96px;
+  margin-top: 24px;
+}
