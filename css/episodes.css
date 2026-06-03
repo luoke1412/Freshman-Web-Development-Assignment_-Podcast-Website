@@ -11,6 +11,17 @@
   align-items: start;
 }
 
+.detail-list {
+  /* 三期节目上下排开，切到详情页以后结构会更清楚 */
+  display: grid;
+  gap: 28px;
+}
+
+.detail-block {
+  /* 每一期节目单独成块，方便浏览时一段一段往下看 */
+  scroll-margin-top: 110px;
+}
+
 .big-pic,
 .audio-box {
   /* 封面占位和音频占位走同一套虚线框风格 */
@@ -31,4 +42,9 @@
   /* 音频播放器区域高度适中，后面放控件正好 */
   min-height: 96px;
   margin-top: 24px;
+}
+
+.audio-box audio {
+  /* 播放器宽度拉满，放进卡片里会更顺眼 */
+  width: 100%;
 }

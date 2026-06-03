@@ -1,6 +1,26 @@
-/* 资源页面 */
+/* 成长故事页面 */
 .item-box {
-  /* 资源卡片给一个最小高度，三张卡片站在一起会更齐 */
+  /* 书籍推荐卡片给一个最小高度，三张站一起会更整齐 */
   min-height: 180px;
   padding: 28px;
+}
+
+.story-top {
+  /* 上半部分是三张书籍卡片，和首页卡片风格保持一致 */
+  margin-bottom: 24px;
+}
+
+.story-main {
+  /* 下半部分分成两列，一边放文字，一边放故事链接 */
+  align-items: stretch;
+}
+
+.story-box {
+  /* 故事区的卡片内边距稍微大一点，阅读起来更舒服 */
+  padding: 30px;
+}
+
+.story-link-list {
+  /* 故事链接列表和上面文字拉开一点距离 */
+  margin-top: 18px;
 }

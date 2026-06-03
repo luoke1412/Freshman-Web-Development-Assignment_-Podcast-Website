@@ -27,18 +27,6 @@
   color: var(--text-body);
 }
 
-.audio-demo {
-  /* 音频占位块，后面可以直接换成真实播放器 */
-  display: grid;
-  place-items: center;
-  min-height: 90px;
-  margin-top: 18px;
-  border: 2px dashed #c9d3e8;
-  border-radius: 18px;
-  color: #7c8aa5;
-  background: linear-gradient(135deg, #f8f9ff, #eef3ff);
-}
-
 @media (max-width: 900px) {
   .first-box {
     /* 手机端首屏上下排，更容易阅读 */
