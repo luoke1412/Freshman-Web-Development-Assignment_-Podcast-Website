@@ -22,9 +22,8 @@
   scroll-margin-top: 110px;
 }
 
-.big-pic,
 .audio-box {
-  /* 封面占位和音频占位走同一套虚线框风格 */
+  /* 音频区域保留柔和底色，和页面风格更统一 */
   display: grid;
   place-items: center;
   border-radius: 18px;
@@ -34,8 +33,11 @@
 }
 
 .big-pic {
-  /* 节目封面区留大一点，视觉上更稳 */
+  /* 节目封面图直接铺满卡片，视觉上会更完整 */
+  width: 100%;
   min-height: 320px;
+  border-radius: 18px;
+  object-fit: cover;
 }
 
 .audio-box {
@@ -47,4 +49,9 @@
 .audio-box audio {
   /* 播放器宽度拉满，放进卡片里会更顺眼 */
   width: 100%;
+}
+
+.cover-detail {
+  /* 详情页封面图单独留这个类，后面换图会更方便讲 */
+  display: block;
 }
